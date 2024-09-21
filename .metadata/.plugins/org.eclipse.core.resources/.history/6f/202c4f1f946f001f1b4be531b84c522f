@@ -1,0 +1,28 @@
+package chapter09;
+interface Flyable1 {
+	int max_speed =100;
+	void fly();
+	default void land() {
+		System.out.println("Landing");
+	}
+	static int getWingCount() {
+		return 2;
+	}
+}
+class Bird1 implements Flyable1{
+	public void fly() {
+		System.out.println("새의  최대 속력은"+max_speed+"입니다");
+	}
+	public void land() {
+		System.out.println("...landing...");
+	}
+}
+
+public class Ex03 {
+	public static void main(String[] args) {
+		Bird1 b =new Bird1();
+		b.fly();
+		b.land();
+		System.out.println(Flyable1.getWingCount());
+	}
+}

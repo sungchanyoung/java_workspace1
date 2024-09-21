@@ -1,0 +1,33 @@
+package chapter08;
+class Store {
+	void display() {
+		System.out.println("음식종류입니다 ");
+	}
+	
+}
+class food extends Store{
+	@Override
+	void display() {
+		System.out.println(" 푸트코트 입니다 ");
+	}
+}
+class cloths extends Store{
+	@Override
+	void display() {
+		System.out.println("옷 코트 입니다");
+	}
+}
+public class Ex01 {
+	public static void main(String[] args) {
+		Store st = new Store();
+		Store fst =new food();// 자동 타입 변환 
+		Store cst = new cloths();
+		
+		if(fst instanceof Store) {
+			System.out.println("이구역 음식 구역입니다 ");
+		}else if(cst instanceof Store ) {
+			System.out.println("이구역은 옷 구역입니다");
+		}
+		
+	}
+}

@@ -1,0 +1,48 @@
+package chapter20.reservation.service;
+import java.util.ArrayList;
+import java.util.List;
+
+
+import chapter20.reservation.model.User;
+/*
+ *  UserService:  - 사용자등록 ,로그인 , 로그 아웃 등 사용자 관련 가능 구현 
+ *  - 메서드 정의 
+ *  
+ */
+public class UserService {
+	private  UserRepositroy userRepository;
+	private User loggedInUser;
+	
+	public UserService() {
+		this.userRepository =new UserRrepository();
+		this.loggedInUser =null;
+		
+	}
+	
+	public void registerUser(String userId, String password, String name,  String email) {
+		User newUser =new User(userId, password, name,email);
+		userRepository.addUser(newUser);//사용자 저장소에 추가 
+		System.out.println("사용자 등록 완료 "+ name);
+	}
+	
+	public boolean login(String userId,String password) {
+		User user = userRepository.findById(userId);
+			if(user.getUserId().equals(userId) && user.getPassword().equals(password)) {
+				loggedInUser =user;//로그인 한 사용자 설정 
+				System.out.println("로그인 성공"+user.getName());
+				return true;
+		}
+		System.out.println("로그인 실패");
+		return false;
+	}
+	public void logout() {
+		if(loggedInUser != null) {
+			System.out.println("로그 아웃 성공 "+ loggedInUser.getName());
+			loggedInUser =null;
+		}else System.out.println("로그인이 되어 있지 않음 ");
+	}
+	public User getLoggedInUser() {
+		return loggedInUser;
+	}
+	
+}

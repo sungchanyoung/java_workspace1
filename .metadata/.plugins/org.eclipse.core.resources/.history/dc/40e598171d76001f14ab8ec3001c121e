@@ -1,0 +1,24 @@
+package chapter18;
+// 빌더 (Builder)
+//복잡한 객체 생성을 단순화하는 생성 패턴 
+// - 객체 생성자 인수가 많을때 가독성이 떨어지는 문제를 보안 
+// 체이닝 방식을 사용하여 가독성 있고 유여한 객체 생성 
+
+//:디자인 패턴 
+// 소프트웨어 공학에서 자주 발생하는 문제에 대한 재사용 가능한 해결책
+// 생성,구조 행위 패턴
+// 빌더 패터은 :생성패턴에 포함 
+class Product{
+	String name;
+	int price;
+	String description;
+	String manufacturer;
+	
+	private Product() {
+		
+	}
+}
+
+public class Builder01 {
+	
+}

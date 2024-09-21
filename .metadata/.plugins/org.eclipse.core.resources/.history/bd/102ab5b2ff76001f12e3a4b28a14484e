@@ -1,0 +1,39 @@
+package chapter20.revservation.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import chapter20.revservation.model.Reservation;
+
+public class ReservationService {
+	private List<Reservation> reservations;
+	
+	public ReservationService() {
+		this.reservations = new ArrayList<Reservation>();
+		
+	}
+	public void  createReservation(String reservationId, String userId, String reservationTime) {
+		Reservation newReservation = new Reservation(reservationId,userId,reservationTime);
+		reservations.add(newReservation);
+		System.out.println("예약 완료");
+	}
+	public List<Reservation> getReservations(String userId){
+		List<Reservation> userReservations = new ArrayList<Reservation>();
+		for(Reservation  reservation : reservations) {
+			if(reservation.getUserId().equals(userId) && reservation.isActive()) {
+				userReservations.add(reservation);
+			}
+			
+		}
+		return userReservations;
+	}
+	public void cancelReservation( String reservationId) {
+		for(Reservation reservation : reservations) {
+			if(reservation.getReservationId().equals(reservationId)&& reservation.isActive());
+			System.out.println("예약 취소 완료");
+			return ;
+		}
+		System.out.println("예약 취소 실패 : 예약Id 가 잘못되었습니다 ");
+	}
+	
+}

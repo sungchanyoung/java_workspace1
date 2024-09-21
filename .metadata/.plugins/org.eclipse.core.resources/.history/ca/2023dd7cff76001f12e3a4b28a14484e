@@ -1,0 +1,13 @@
+package chapter20.revservation.controller;
+/*
+ * 	Reservation =예약 정보 
+ *  - 예약 아이디, 사용자 Id 예약 시간 , 예약 상태 
+ *  
+ */
+
+
+
+public class Resvervation {
+	
+	
+}

@@ -1,0 +1,7 @@
+package Etc;
+//문제 로또 최저 와 최고 순위 구하기 
+public class Ex01 {
+	public static void main(String[] args) {
+	
+	}
+}

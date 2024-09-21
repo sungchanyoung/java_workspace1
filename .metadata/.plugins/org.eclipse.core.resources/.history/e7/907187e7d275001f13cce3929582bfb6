@@ -1,0 +1,27 @@
+package chapter14View01;
+
+import java.util.Scanner;
+
+public class view01 {
+	private Scanner sc= new Scanner(System.in);
+	
+	public String getUserChoice() {
+		System.out.println("===========");
+		System.out.println("파스타");
+		System.out.println("스시");
+		System.out.println("제육볶음");
+		System.out.println("망고주스");
+		System.out.println("Your Choide");
+		
+		return sc.nextLine();
+	}
+	public int getQuantity() {
+		System.out.println("수량 입력 ");
+		int quantity = sc.nextInt();
+		sc.nextLine();
+		return quantity;
+	}
+	public void displayOredrDone() {
+		System.out.println("음식 조리 완료");
+	}
+}

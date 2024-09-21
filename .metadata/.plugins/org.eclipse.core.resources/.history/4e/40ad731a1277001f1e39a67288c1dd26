@@ -1,0 +1,25 @@
+package chapter20.reservation.repository;
+
+import java.util.ArrayList;
+
+import chapter20.reservation.model.Reservation;
+
+//예약 데이터 저장소 
+public class ReservationRepository {
+	private List<Reservation> reservations;
+	public ReservationRepository() {
+		this.reservations =new ArrayList<Reservation>();
+		
+	}
+	public void addReservation(Reservation reservation) {
+		reservations.add(reservation);
+	}
+	public Reservation findById(String reservationId) {
+		for(Reservation reservation : reservations) {
+			if(reservation.getReservationId().equals(reservationId)) {
+				return reservation;
+			}
+		}
+	}
+	return null;
+}

@@ -1,0 +1,24 @@
+package Etc;
+//문제 로또 최저 와 최고 순위 구하기 
+public class Ex01 {
+	public static void main(String[] args) {
+		int[] rank = {6,6,5,4,3,2,1,};
+		int[] answer =new int[2];
+		for(int i=0; i<lottos.length; i++) {
+			if(lotts[i] ==0) {
+				answer[0]++;
+				continue;
+			}
+			for(int j =0; j<win_nums.legnth; j++) {
+				if(lottose[i] == win_nums[j] {
+					answer[0]++;
+					answer[1]++;
+				}
+			}
+			
+		}
+		answer[0] = rank[answer[0]];
+		answer[1] = rank[answer[1]];
+		return answer;
+	}
+}

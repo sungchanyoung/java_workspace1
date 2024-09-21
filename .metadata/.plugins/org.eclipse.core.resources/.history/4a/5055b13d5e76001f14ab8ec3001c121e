@@ -1,0 +1,17 @@
+package chapter20Library;
+
+public class BookService {
+
+	public void addBook(String title, String author, int year) {
+		
+		
+	}
+
+	
+
+	public void updateBook(int id, String title, String author, int year) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

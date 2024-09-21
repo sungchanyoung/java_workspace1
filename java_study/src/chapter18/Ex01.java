@@ -1,0 +1,67 @@
+package chapter18;
+class Product{//왜 한번더 객체를 정의를 해주는 걸까 ?? 구조분리 
+	private final String name;
+	private final int price;
+	
+	private String description;
+	private String manufacturer;
+	
+	private Product(Builder builer) {//builder클래스 생성 -외부에서 직접적인 생성자 호출이 불가 
+		this.name = builer.name;
+		this.price = builer.price;
+		this.description =builer.description;
+		this.manufacturer = builer.menufacturer;
+	}
+	public static class Builder{
+		
+		private final String name; 
+		private final int price;
+		//선택적 ,필수적  나누는 기준이 있을까?? 
+		private String  description;
+		private String  menufacturer;
+		public Builder(String name, int price) {// 피수 속성을 위한 빌더 생성자 
+			this.name =name;
+			this.price=price;
+		}
+		public Builder description(String description) {
+			this.description =description;
+			return this;
+		}
+		public Builder menufacturer(String menufacturer) {
+			this.menufacturer =menufacturer;
+			return this;
+		}
+		public Product build() {
+			return new Product(this);
+		}
+		
+		
+		
+	}
+	public String getName() {
+	
+		return name;
+	}
+	
+}
+public class Ex01 {
+		public static void main(String[] args) {
+			//필수 속설만 설정한 Product 객체생성이다 
+			Product pd1 =new Product.Builder("아이폰", 20).build();
+			Product pd2 =new Product.Builder("z플립", 10)
+					.description("갤럭시 핸드폰 ")
+					.menufacturer("삼성")
+					.build();
+			Product pd3 =new Product.Builder("겔럭시 노트북", 100)//필수 속성 
+					.description("갤럭시 노트북 ")
+					.menufacturer("삼성")
+					.build();
+			
+			System.out.println(pd1.getName());// 아이폰 16
+			System.out.println(pd1.toString());
+			System.out.println(pd2.getName()); // 갤럭시 S24
+			System.out.println(pd3.getName()); // 갤럭시 북 4
+			
+		}
+		
+}

@@ -1,0 +1,5 @@
+package chapter20.revservation.model;
+
+public class Reservation {
+
+}

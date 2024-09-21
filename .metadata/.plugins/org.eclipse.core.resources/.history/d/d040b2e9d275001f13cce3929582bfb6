@@ -1,0 +1,31 @@
+package chapter14Model01;
+
+import java.util.*;
+
+public class model01 {
+	private Map<String,String>menuInfo;
+	private Map<String,Integer>order;
+	private boolean isDone;
+	
+	public model01() {
+		menuInfo = new HashMap<String,String>();
+		order = new HashMap<String,Integer>();
+		isDone = false;
+		
+		menuInfo.put("피자","이탈리아");
+		menuInfo.put("제육볶음","한식");
+		menuInfo.put("스시","일본");
+		menuInfo.put("망고주스","동남아");
+	}
+	public void addOrder(String dish, int quatantity) {
+		if(menuInfo.containsKey(dish)) {
+			order.put(dish, order.getOrDefault(dish, 0)+quatantity);
+		}
+	}
+	public void setDone(boolean isDone) {
+		this.isDone = isDone;
+	}
+	public Boolean isDone() {
+		return isDone;
+	}
+}

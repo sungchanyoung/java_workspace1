@@ -1,0 +1,40 @@
+package chapter14Controller01;
+// constroller 내부에 model,view코드가 있을수 있음
+//mvc패턴 규칙 
+import chapter14Model01.*;
+import chapter14View01.*;
+public class cotroller01 {
+	private chapter14Model01.model01 model01;
+	private View01 view01;
+	
+	public cotroller01( Model01 model01 ,View01 view01) {
+		this.model01 =model01;
+		this.view01=view01;
+	}
+	public void processOder() {
+		while(!model01.isDone()) {
+			String userChoice =view01.getUserChoice();
+			switch (userChoice) {
+			case "1":
+				model01.addOrder("파스타", 20000);
+				break;
+			case "2":
+				model01.addOrder("스시", 25000);
+				break;
+			case "3":
+				model01.addOrder("제육볶음", 10000);
+				break;
+			case "4":
+				model01.addOrder("망고주스", 1000);
+				break;
+			case "X":
+				model01.setDone(true);
+				view01.displayOrderDone();
+				break;
+
+			default:
+				System.out.println("다시 주문 부탁드립니다");
+			}
+		}
+	}
+}

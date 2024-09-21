@@ -1,0 +1,34 @@
+package chapter20Library2.repository;
+
+
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+import chapter20Library2.model.Book;
+import chapter20Library2.model.User;
+
+public class BookRepository {
+
+private List<Book> books =new ArrayList<Book>();
+	
+	public void addUser(Book book) {
+		books.add(book);
+		
+	}
+
+	public User findUserById(String bookTitle) {
+		for(Book book : books) {
+			if(book.getTitle().equals(bookTitle));
+			return book;
+		}
+		return null;
+	}
+
+
+	public Book[] findAllUser() {
+		return books;
+	}
+	
+}
