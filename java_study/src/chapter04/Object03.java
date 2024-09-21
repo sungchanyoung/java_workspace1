@@ -3,17 +3,16 @@ package chapter04;
 class car{
 	String model;
 	int year;
-	car(String modelName, int year){
-		//this키워드 
-		// 클래스의 필드와 생성자로 받아오는 데이터의 이름이 같을 경우 구분을 위해 사용 
+	car(String modelName, int year){// 매개변수 
+		//this키워드 : 클래스의 필드와 생성자로 받아오는 데이터의 이름이 같을 경우 구분을 위해 사용 
 		model =modelName;
 		this.year = year;
 	}
-	void displayInfo() {
+	void displayInfo() {//void 메서드명  = 리턴값이 없는 메서드 
 		System.out.println("model"+ model+ "year : "+"year");
 	}
 }
-	//클래스 의 행동 (멧서드 
+	//클래스 의 행동 (메서드)
 
 	//: 클래스 내부에서 정위된 함 객체 행동을표현 
 	// 클래스의 해당 값을 변경 가능, 값을 반환 

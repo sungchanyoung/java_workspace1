@@ -4,7 +4,7 @@ import  java.util.*;
 // 데이터를 메모리에 저장하고 관리하는 클래스
 public class BookRepository {
 	private List<Book> books = new ArrayList<Book>();
-	private int idCounter = 1;
+	private int idCounter = 1;// 
 	
 	// 메모리에 데이터를 저장하는 메서드
 	public void save(Book book) {

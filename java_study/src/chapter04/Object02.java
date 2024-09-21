@@ -1,7 +1,7 @@
 package chapter04;
 // 객체 지향 프로그래밍  -  클래스와 객체 
-// 1. 클랴스(class)정의 
-// -객체 만들기  우히나 템플릿 
+// 1. 클래스(class)정의 
+// -객체 만들기  
 // -  객체의 상태(속성)와 행동(메서드)을 정의 
 // 실제  데이터나 코드 X 데이터와 기능 구조를 정의하는 하나의 개념적인 틀 
 
@@ -12,21 +12,21 @@ package chapter04;
 public class Object02 {
 	public static void main(String[] args) {
 		//클래스 선언 방법 
-//		[접근 제한자 ]class Name{속성(변수)&&메서드(함수)};
+//		[접근 제한자] class Name{속성(변수)&&메서드(함수)};
 		//private, pumblic, proteted,default
-	// public:  모든 클래스애소ㅓ 접근  가능 
-//private :해당 클래스 내부에서만 접근 가능 
+		// public:  모든 클래스에서 접근  가능 
+		//private :해당 클래스 내부에서만 접근 가능 
 		//protected : 같은 페이지 내부에서 만 접근 가능 
 	}
 }
 	
-class Person{
-	String name;
+class Person{//클래스
+	String name;//객체 
 	int age ;
 	double heht;
 }
 class Bokk{
- int[] PageNumber;
+ int[] PageNumber;// 배열 
  String title;
  String author;
 }

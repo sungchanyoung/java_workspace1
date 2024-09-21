@@ -2,7 +2,7 @@ package chapter20Library;
 
 
 
-import lombok.AllArgsConstructor;
+import lombok.AllArgsConstructor;  
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,7 +21,7 @@ public class Book {
 	public Book(String title, String author, int year) {
 		this.title = title;
 		this.author = author;
-		this.year = year;
+		this.year = year;// 
 	}
 	
 //	@Data: Getter/Setter, ToString, Equals, HashCode를 포함

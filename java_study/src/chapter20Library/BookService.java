@@ -28,7 +28,7 @@ public class BookService {
 		bookRepository.delete(id);
 	}
 
-	public Book getBook(int id) {
+	public Book getBook(int id, String author) {
 		return bookRepository.findById(id);
 	}
 

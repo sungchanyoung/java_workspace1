@@ -27,13 +27,13 @@ public class Object06 {
 		Counter c4 = new Counter();
 		Counter c5 = new Counter();
 		
-		System.out.println(c3.count);
+		System.out.println(c3.count);//5
 		
 		new Counter();
 		new Counter();
 		new Counter();
 		new Counter();
 	
-		System.out.println(Counter.count);
+		System.out.println(Counter.count);//9
 	}
 }

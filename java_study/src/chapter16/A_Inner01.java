@@ -14,7 +14,7 @@ package chapter16;
 // 3. 메서드  내부 클래스(지역 클래스)
 //: 메서드 내에 정의된 내부 클랴스 , 해당 메서드 내에서만 사용 가능
 //>> 메서드의 지역변수에만 접근 가능 
-// 로컬 변수가 final인 경우에만 접근 가능 
+// 로컬 변수가 final인 경우에만 접근 가능 .
 class OuterClass{
 	private String outerField = "외부 클래스의 필드 ";
 	static String  staticField = "외부 클래스 스태틱 필드";
@@ -56,7 +56,7 @@ public class A_Inner01 {
 		// 1) 외부 클래스 타입. 내부 클래스 타입 변수 =new 외부클래스 .내부 클래스 
 	
 		OuterClass.StaticClass staricInner = new OuterClass.StaticClass();
-		
+		staricInner.display();
 		//== 메서드 내부 클래스 (지역 클래스)===
 		
 		// 익명  내부클래스*** ====
